@@ -1,10 +1,10 @@
 {
-  "name": "node-paxibay",
+  "name": "paxibay enhancer",
   "version": "0.0.1",
   "description": "paxibay enhancer",
   "author": {
     "name": "Payne",
-    "email": "inpert@yahoo.ca"
+    "email": "paxibay@yahoo.ca"
   },
   "dependencies": {
     "angular": "^1.4.2",
