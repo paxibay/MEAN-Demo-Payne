@@ -1,0 +1,75 @@
+<div class="product-panel">
+
+    <section class="product-panel">
+
+        <label for="product_name" class="latblesection">Name</label>
+        <input type="text" id="product_name" ng-model="vm.activeProject.name" placeholder='enter projectname'><br>
+
+        <label for="scale">Scale</label>
+        <input type="number" id="scale" ng-model="vm.activeProject.scale" ><br>
+        
+
+        <label for="unit">
+            Unit
+            <select ng-model="vm.activeProject.unit"
+                    ng-options="unit.lookupCode as unit.description for unit in vm.unitOptions"></select>
+        </label>
+
+        <label for="symbol">
+            Symbol
+            <select ng-model="vm.activeProject.symbol"
+                    ng-options="symbol.lookupCode as symbol.description for symbol in vm.symbolOptions"></select>
+        </label>
+        <br />
+        <label for="price">Price</label>
+        <input type="number" id="price" ng-model="vm.activeProject.price"><br>
+
+    </section>
+
+    <br />
+
+    <hr />
+    
+    <br />
+
+    <section class="">
+        <table st-table="displayCollection" st-safe-src="rowCollection" class="table">
+            <thead>
+                <tr>
+                    <th class="clickable">Year</th>
+                    <th class="clickable">Quantity</th>
+                    <th class="clickable">Price</th>
+                    <th class="clickable">Sum</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="row in vm.blueprint.scales">
+                    <td>{{row.year}}</td>
+                    <td>{{row.scale[vm.activeScale(row)]}}</td>
+                    <td>{{row.price[vm.activeScale(row)]}}</td>
+                    <td>{{row.scale[0] * row.price[0]}}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4" class="text-center">
+                        <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="displayedPages"></div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+</div>
+<!--<section>
+    <h1 id="heading">Future Value Calculator</h1>
+    <label for="investment">Investment Amount:</label>
+    <input type="text" id="investment"><br>
+    <label for="rate">Annual Interest Rate:</label>
+    <input type="text" id="rate"><br>
+    <label for="years">Number of Years:</label>
+    <input type="text" id="years"><br>
+    <label for="future_value">Future Value:</label>
+    <input type="text" id="future_value" disabled="disabled"><br>
+    <label>&nbsp;</label>
+    <input type="button" id="calculate" value="Calculate"><br>
+</section>-->

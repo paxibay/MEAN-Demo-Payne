@@ -1,0 +1,32 @@
+<div class="panel panel-default">
+    <div class="side-panel-container">
+        <span>
+            <button class="btn btn-primary"
+                    ng-click="vm.createValuator()">
+                Add
+            </button>
+            <button class="btn btn-primary"
+                    ng-click="vm.updateProject()">
+                Update
+            </button>
+        </span>
+        <br /><br />
+        <div>
+            <label>
+                {{vm.projectCount}}
+                <input type="number" name="input" ng-model="vm.blueprint.settings.count" style="width:100px" min="1" max="9" required>
+            </label>
+        </div>
+        <br /><br />
+        <tabset>
+            <tab data-ng-repeat="tab in vm.tabs" heading="{{tab.title}}" ng-click="vm.activateTab(tab.code)">
+                <div ng-include="tab.content"></div>
+            </tab> 
+        </tabset>
+        <br /><br />
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,90 @@
+<div class="panel panel-default policy-table">
+    <div class="panel-heading"><h4>{{title}}</h4></div>
+    <section class="product-panel">
+        
+        <input type="number" id="scale" ng-model="vm.activeProduct.scale"><br>
+        <p>list box goes here</p>
+
+        <button class="btn btn-primary"
+                ng-click="vm.updateProject()">
+            Return
+        </button>
+        <button class="btn btn-primary"
+                ng-click="vm.updateProject()">
+            Reset
+        </button>
+
+        <label for="unit">
+            Unit
+            <select ng-model="vm.activeProduct.unit"
+                    ng-options="unit.lookupCode as unit.description for unit in unitOptions"></select>
+        </label>
+
+        <button class="btn btn-primary"
+                ng-click="vm.updateProject()">
+            Import
+        </button>
+
+        <label>
+            selft
+            <input type="checkbox" name="input" ng-model="qty">
+        </label>
+
+    </section>
+
+    <hr />
+
+    <section class="product-panel">
+
+        <label for="scale">Scale</label>
+        <input type="number" id="scale" ng-model="vm.activeProduct.scale"><br>
+
+        <label for="scale">Scale</label>
+        <input type="number" id="scale" ng-model="vm.activeProduct.scale"><br>
+
+        <label for="scale">Scale</label>
+        <input type="number" id="scale" ng-model="vm.activeProduct.scale"><br>
+
+        <label for="scale">Scale</label>
+        <input type="number" id="scale" ng-model="vm.activeProduct.scale"><br>
+
+        <label for="scale">Scale</label>
+        <input type="number" id="scale" ng-model="vm.activeProduct.scale"><br>
+
+        <label for="scale">Scale</label>
+        <input type="radio" id="scale" ng-model="vm.activeProduct.scale"><br>
+
+        <label for="scale">Scale</label>
+        <input type="radio" id="scale" ng-model="vm.activeProduct.scale"><br>
+
+        <label for="unit">
+            Unit
+            <select ng-model="vm.activeProduct.unit"
+                    ng-options="unit.lookupCode as unit.description for unit in unitOptions"></select>
+        </label>
+
+    </section>
+
+    <hr />
+
+    <section>
+
+        <button class="btn btn-primary"
+                ng-click="vm.updateProject()">
+            Add
+        </button>
+
+        <button class="btn btn-primary"
+                ng-click="vm.updateProject()">
+            Delete
+        </button>
+
+        <label for="scale">Scale</label>
+        <input type="number" id="scale" ng-model="vm.activeProduct.scale"><br>
+    </section>
+
+    <button class="btn btn-primary"
+            ng-click="vm.updateProject()">
+        Close
+    </button>
+</div>
